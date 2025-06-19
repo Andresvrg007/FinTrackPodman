@@ -3,6 +3,10 @@
 
 ExpensesApp es una aplicación web full-stack para gestionar finanzas personales. Permite a los usuarios registrar ingresos y gastos, categorizar transacciones y visualizar sus datos financieros con gráficos e informes usando podman como contenedor de toda la app.
 
+### Prerrequisitos
+- **Podman** y **Podman Compose** instalados
+- **Git** para clonar el repositorio
+- 
 ### Características
 - Autenticación de usuarios (registro, inicio y cierre de sesión)
 - Panel principal con resumen financiero y gráficos
