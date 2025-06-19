@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # Base de datos MongoDB
+  mongodb:
+    image: mongo:7.0
+    container_name: expense-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: ExpenseApp
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - expense-network
+
+  # Backend Node.js
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: expense-backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://mongodb:27017/ExpenseApp
+      - JWT_SECRET=mi_secreto_super_seguro
+      - PORT=5000
+    depends_on:
+      - mongodb
+    networks:
+      - expense-network
+
+  # Frontend React
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: expense-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_URL=http://localhost:5000
+    depends_on:
+      - backend
+    networks:
+      - expense-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  expense-network:
+    driver: bridge
+
