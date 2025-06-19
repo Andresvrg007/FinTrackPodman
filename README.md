@@ -1,4 +1,57 @@
 # ExpensesApp
+## Español
+
+ExpensesApp es una aplicación web full-stack para gestionar finanzas personales. Permite a los usuarios registrar ingresos y gastos, categorizar transacciones y visualizar sus datos financieros con gráficos e informes.
+
+### Características
+- Autenticación de usuarios (registro, inicio y cierre de sesión)
+- Panel principal con resumen financiero y gráficos
+- Agregar, editar y eliminar ingresos y gastos
+- Categorizar transacciones
+- Generar reportes en PDF
+- Interfaz moderna y responsiva
+
+### Tecnologías Utilizadas
+- **Frontend:** React, Vite, Tailwind CSS, Recharts, jsPDF
+- **Backend:** Node.js, Express, MongoDB, Mongoose
+
+### Primeros Pasos
+
+#### Requisitos Previos
+- Node.js y npm instalados
+- Instancia de MongoDB (local o en la nube)
+
+#### Configuración del Backend
+1. Ve a la carpeta `backend`:
+   ```powershell
+   cd backend
+   ```
+2. Instala las dependencias:
+   ```powershell
+   npm install
+   ```
+3. Crea un archivo `.env` con tu cadena de conexión de MongoDB y otras variables de entorno necesarias.
+4. Inicia el servidor backend:
+   ```powershell
+   npm run dev
+   ```
+
+#### Configuración del Frontend
+1. Ve a la carpeta `frontend`:
+   ```powershell
+   cd ../frontend
+   ```
+2. Instala las dependencias:
+   ```powershell
+   npm install
+   ```
+3. Inicia el servidor de desarrollo del frontend:
+   ```powershell
+   npm run dev
+   ```
+
+El frontend estará disponible en `http://localhost:5173` y el backend en `http://localhost:3000` por defecto.
+
 
 ## English
 
@@ -55,55 +108,3 @@ The frontend will be available at `http://localhost:5173` and the backend at `ht
 
 ---
 
-## Español
-
-ExpensesApp es una aplicación web full-stack para gestionar finanzas personales. Permite a los usuarios registrar ingresos y gastos, categorizar transacciones y visualizar sus datos financieros con gráficos e informes.
-
-### Características
-- Autenticación de usuarios (registro, inicio y cierre de sesión)
-- Panel principal con resumen financiero y gráficos
-- Agregar, editar y eliminar ingresos y gastos
-- Categorizar transacciones
-- Generar reportes en PDF
-- Interfaz moderna y responsiva
-
-### Tecnologías Utilizadas
-- **Frontend:** React, Vite, Tailwind CSS, Recharts, jsPDF
-- **Backend:** Node.js, Express, MongoDB, Mongoose
-
-### Primeros Pasos
-
-#### Requisitos Previos
-- Node.js y npm instalados
-- Instancia de MongoDB (local o en la nube)
-
-#### Configuración del Backend
-1. Ve a la carpeta `backend`:
-   ```powershell
-   cd backend
-   ```
-2. Instala las dependencias:
-   ```powershell
-   npm install
-   ```
-3. Crea un archivo `.env` con tu cadena de conexión de MongoDB y otras variables de entorno necesarias.
-4. Inicia el servidor backend:
-   ```powershell
-   npm run dev
-   ```
-
-#### Configuración del Frontend
-1. Ve a la carpeta `frontend`:
-   ```powershell
-   cd ../frontend
-   ```
-2. Instala las dependencias:
-   ```powershell
-   npm install
-   ```
-3. Inicia el servidor de desarrollo del frontend:
-   ```powershell
-   npm run dev
-   ```
-
-El frontend estará disponible en `http://localhost:5173` y el backend en `http://localhost:3000` por defecto.
