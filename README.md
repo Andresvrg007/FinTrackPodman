@@ -1,7 +1,7 @@
 # ExpensesApp
 ## Español
 
-ExpensesApp es una aplicación web full-stack para gestionar finanzas personales. Permite a los usuarios registrar ingresos y gastos, categorizar transacciones y visualizar sus datos financieros con gráficos e informes.
+ExpensesApp es una aplicación web full-stack para gestionar finanzas personales. Permite a los usuarios registrar ingresos y gastos, categorizar transacciones y visualizar sus datos financieros con gráficos e informes usando podman como contenedor de toda la app.
 
 ### Características
 - Autenticación de usuarios (registro, inicio y cierre de sesión)
